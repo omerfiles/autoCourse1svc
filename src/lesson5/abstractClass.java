@@ -5,6 +5,8 @@ package lesson5;
 	
 	String name;
 	
+	int id;
+	
 	void setName(String name){
 		
 		this.name=name;
