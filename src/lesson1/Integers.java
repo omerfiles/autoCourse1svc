@@ -13,6 +13,14 @@ public class Integers {
 		
 		
 		int a;
+		
+		
+		//getting value of string to number
+		
+		String num="3232";
+		int sNum=Integer.valueOf(num);
+		
+		System.out.println(sNum);
 	
 
 	}

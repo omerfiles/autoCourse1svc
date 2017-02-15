@@ -20,6 +20,14 @@ public class Strings {
 	
 
 		compareStr(comp1, "abcd");
+		
+		
+		String concat="abca";
+		concat=concat+"dfg";
+		
+		char a=concat.charAt(2); //get char in specific index
+		
+	System.out.println(concat.indexOf("a"));	;
 
 	}
 
