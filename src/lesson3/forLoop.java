@@ -43,5 +43,17 @@ public class forLoop {
 	public static void reverseForLoop(){
 		
 	}
+	
+	public static void nestedLoop(){
+		
+		int students=10;
+		int tests=10;
+		
+		for(int i=0;i<students;i++){
+			for(int j=0;j<tests;j++){
+				//check if student i finished test j
+			}
+		}
+	}
 
 }
