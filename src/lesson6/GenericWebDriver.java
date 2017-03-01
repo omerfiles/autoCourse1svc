@@ -135,4 +135,9 @@ public class GenericWebDriver {
 		runJavascript("window.scrollTo(" + y + ", 0);");
 	}
 
+	public void openUrl(String string) {
+		webDriver.get(string);
+
+	}
+
 }

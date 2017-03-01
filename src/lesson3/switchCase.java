@@ -1,6 +1,6 @@
 package lesson3;
 
-public class switchCase {
+public class switchCase  {
 
 	public void switch1(int errorCode) {
 		switch (errorCode) {
