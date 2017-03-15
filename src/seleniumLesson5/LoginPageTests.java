@@ -1,5 +1,6 @@
 package seleniumLesson5;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -33,6 +34,10 @@ public class LoginPageTests {
 	@Test
 	public void testLogin2() {
 		loginPage.openPageAndLogin("aaaa", "123444");
+
+		String currentTitleText = loginPage.getTitle();
+
+		Assert.assertTrue(currentTitleText.equals("bla bla"));
 	}
 
 }

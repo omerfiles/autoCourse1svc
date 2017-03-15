@@ -15,7 +15,7 @@ public class LoginPage extends GenericPageObject {
 
 	public void enterUserName(String username) {
 		getUserNameElement().sendKeys(username);
-		
+
 	}
 
 	private WebElement getUserNameElement() {
@@ -33,18 +33,21 @@ public class LoginPage extends GenericPageObject {
 
 	public void submit() {
 		// TODO Auto-generated method stub
-		
-	}
-	
-	public void openPageAndLogin(String userName, String password){
-		webDriver.openUrl("");
-		
-		enterUserName(userName);
-		
-		enterPassword(password);
-		
-		submit();
 
+	}
+
+	public void openPageAndLogin(String userName, String password) {
+		webDriver.openUrl("");
+
+		enterUserName(userName);
+
+		enterPassword(password);
+
+		submit();
+	}
+
+	public String getTitle() {
+		return webDriver.getElement("div[@id='title']").getText();
 	}
 
 }

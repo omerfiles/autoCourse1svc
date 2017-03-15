@@ -10,6 +10,8 @@ public class Vehicle {
 
 	private String licenseNumber;
 
+	private int spareWheels;
+
 	// constructor
 	public Vehicle(int wheels, String engine, int year, String licenseNumber) {
 		super();
@@ -55,6 +57,22 @@ public class Vehicle {
 
 	public void drive(int km) {
 		System.out.println("vehicle was driving for " + km + " km");
+	}
+
+	public int getSpareWheels() {
+		return spareWheels;
+	}
+
+	public void setSpareWheels(int spareWheels) {
+		this.spareWheels = spareWheels;
+	}
+
+	public int getNumberOfSpareWheels() {
+		spareWheels=wheels/4;
+		
+		return spareWheels;
+		
+		
 	}
 
 }
