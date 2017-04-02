@@ -9,6 +9,7 @@ import java.util.logging.Level;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.UnhandledAlertException;
@@ -138,6 +139,32 @@ public class GenericWebDriver {
 	public void openUrl(String string) {
 		webDriver.get(string);
 
+	}
+
+	public void addCookie(String cookieName, String cookieVlaue) {
+		webDriver.manage().addCookie(new Cookie(cookieName, cookieName));
+	}
+
+	public void deleteCookie(String cookieName) {
+		Cookie cookie = webDriver.manage().getCookieNamed(cookieName);
+		webDriver.manage().deleteCookie(cookie);
+	}
+
+	public boolean checkIfCookieExist(String cookieName) {
+		Cookie cookie = webDriver.manage().getCookieNamed(cookieName);
+		if (cookie == null) {
+
+			return false;
+		} else
+			return true;
+	}
+
+	public void deleteCookies() {
+		webDriver.manage().deleteAllCookies();
+	}
+
+	public int getNumberOfTabs(){
+	List<String>winHandles=new ArrayList<String>()( 	webDriver.getWindowHandle());
 	}
 
 }

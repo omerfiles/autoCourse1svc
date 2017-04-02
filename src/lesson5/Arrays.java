@@ -1,7 +1,10 @@
 package lesson5;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.commons.lang3.RandomUtils;
 
 public class Arrays {
 
@@ -10,6 +13,8 @@ public class Arrays {
 		String[] words = new String[5];
 		
 		int[]arr=new int[]{};
+		
+	
 
 		String[] cities = new String[] { "haifa", "tel aviv", "bat yam", "tel aviv" };
 

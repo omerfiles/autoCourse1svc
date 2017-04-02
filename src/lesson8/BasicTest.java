@@ -15,24 +15,21 @@ public class BasicTest {
 	TestReporter testReporter;
 
 	public TestLog testlog;
+	
+	String env;
+	
+	String userId;
+	
+	
 
 	@Before
 	public void setup() {
+		testReporter=new TestReporter();
+		
+		userId="44334343";
 	}
 
-	@Rule
-	TestWatcher testWatcher = new TestWatcher() {
-
-		@Override
-		protected void failed(Throwable e, Description description) {
-			super.failed(e, description);
-		}
-
-		@Override
-		protected void starting(Description description) {
-			super.starting(description);
-		}
-	};
+	
 
 	@After
 	public void tearDown() {
